@@ -13,7 +13,7 @@ namespace ConsoleApp8
         public string productPurchasePlace { get; set; }
         public DateTime productPurchaseDate { get; set; }
         public DateTime? productExpirationDate { get; set; }
-        public static List<Product> productList = new List<Product>();
+        public static List<Product>? productList = new List<Product>();
         public static int SKUCounter { get; set; }
         public int SKU { get; set; }
         public Product()
@@ -23,12 +23,18 @@ namespace ConsoleApp8
 
         public static void AddProduct()
         {
+            Product product = new Product();
             var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
 
             var inventoryJson = File.ReadAllText(jsonFilePath);
-            var productList = JsonConvert.DeserializeObject<Product>(inventoryJson);
+            Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
+            
+            //foreach (var product in productList)
+            //{
+            //    productList.Add(product);
+            //}
 
-            Product product = new Product();
+            
            
             product.SKU = SKUCounter;
             SKUCounter++;
@@ -69,7 +75,7 @@ namespace ConsoleApp8
 
                     Console.WriteLine($"{productName} has been added.");
 
-                    var inventoryJson = JsonConvert.SerializeObject(productList);
+                    inventoryJson = JsonConvert.SerializeObject(productList);
 
                     File.WriteAllText(@"inventory.json", inventoryJson);
                 }
@@ -92,12 +98,24 @@ namespace ConsoleApp8
 
                 Console.WriteLine($"{productName} has been added.");
 
+
             }
 
-            inventoryJson = JsonConvert.SerializeObject(productList);
+            inventoryJson = JsonConvert.SerializeObject(productList, Formatting.Indented);
             File.WriteAllText(jsonFilePath, inventoryJson);
         }
 
-        
+        public static void RemoveProductSKU()
+        {
+            //deserialize shit
+            
+            
+        }
+        public static void RemoveProductName()
+        {
+            //deserialize shit
+
+
+        }
     }
 } 

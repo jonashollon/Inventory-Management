@@ -22,9 +22,11 @@ namespace ConsoleApp8
                 case "1":
                     Product.AddProduct();
                     break;
-                //case "2":
-                //    Product.RemoveProduct();
-                //    break;
+                case "2":
+                    Console.WriteLine(@"Which product would you like to remove?
+                    You can make a selection by (1)Product name or (2)SKU.
+                    Please select 1 or 2");
+                    break;
                 //case "3":
                 //    Product.SearchProduct();
                 //    break;
