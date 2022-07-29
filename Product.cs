@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 
 namespace ConsoleApp8
@@ -12,7 +13,7 @@ namespace ConsoleApp8
         public string productPurchasePlace { get; set; }
         public DateTime productPurchaseDate { get; set; }
         public DateTime? productExpirationDate { get; set; }
-        public static List<Product> ProductList = new List<Product>();
+        public static List<Product> productList = new List<Product>();
         public static int SKUCounter { get; set; }
         public int SKU { get; set; }
         public Product()
@@ -22,8 +23,11 @@ namespace ConsoleApp8
 
         public static void AddProduct()
         {
-            
-            
+            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+
+            var inventoryJson = File.ReadAllText(jsonFilePath);
+            var productList = JsonConvert.DeserializeObject<Product>(inventoryJson);
+
             Product product = new Product();
            
             product.SKU = SKUCounter;
@@ -47,7 +51,7 @@ namespace ConsoleApp8
             DateTime purchaseDatePlaceholder = DateTime.Now;
 
             Console.WriteLine("When was the product purchased (MM/DD/YYYY)?");
-            while (!DateTime.TryParse(Console.ReadLine(), out purchaseDatePlaceholder))
+            while (!DateTime.TryParseExact(Console.ReadLine(), "MM/dd/yyyy", null, DateTimeStyles.None, out purchaseDatePlaceholder))
                 Console.WriteLine("Please try again while typing the date in the proper format");
 
             product.productPurchaseDate = purchaseDatePlaceholder;
@@ -61,11 +65,11 @@ namespace ConsoleApp8
                 if (expiryAnswerLower == "n")
                 {
                     //serialize to JSON
-                    ProductList.Add(product);
+                    productList.Add(product);
 
                     Console.WriteLine($"{productName} has been added.");
 
-                    var inventoryJson = JsonConvert.SerializeObject(ProductList);
+                    var inventoryJson = JsonConvert.SerializeObject(productList);
 
                     File.WriteAllText(@"inventory.json", inventoryJson);
                 }
@@ -79,23 +83,19 @@ namespace ConsoleApp8
                 DateTime expirationDatePlaceholder = DateTime.Now;
 
                 Console.WriteLine("What is the expiration date (MM/DD/YYYY)?");
-                while (!DateTime.TryParse(Console.ReadLine(), out expirationDatePlaceholder))
+                while (!DateTime.TryParseExact(Console.ReadLine(), "MM/dd/yyyy", null, DateTimeStyles.None, out expirationDatePlaceholder))
                     Console.WriteLine("Please try again while typing the date in the proper format");
 
                 product.productExpirationDate = expirationDatePlaceholder;
 
-                ProductList.Add(product);
+                productList.Add(product);
 
                 Console.WriteLine($"{productName} has been added.");
 
-                var inventoryJson = JsonConvert.SerializeObject(ProductList);
-
-                File.WriteAllText(@"inventory.json", inventoryJson);
-
             }
 
-
-
+            inventoryJson = JsonConvert.SerializeObject(productList);
+            File.WriteAllText(jsonFilePath, inventoryJson);
         }
 
         
