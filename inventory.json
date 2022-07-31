@@ -1,1 +1,18 @@
-fuck
+[
+  {
+    "productName": null,
+    "productPurchasePrice": 0.0,
+    "productPurchasePlace": null,
+    "productPurchaseDate": "0001-01-01T00:00:00",
+    "productExpirationDate": null,
+    "SKU": 0
+  },
+  {
+    "productName": "gibb",
+    "productPurchasePrice": 1.0,
+    "productPurchasePlace": "asjdhask",
+    "productPurchaseDate": "1212-12-12T00:00:00",
+    "productExpirationDate": null,
+    "SKU": 1
+  }
+]
