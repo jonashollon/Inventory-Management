@@ -34,7 +34,7 @@ namespace ConsoleApp8
             Product product = new Product();
             var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
             var inventoryJson = File.ReadAllText(jsonFilePath);
-            if (!File.Exists(jsonFilePath))
+            if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
 
             else
@@ -42,6 +42,7 @@ namespace ConsoleApp8
                 // fixes pesky null exception
                 productList.Add(new Product());
             }
+            SKUCounter = productList.Max(s => s.SKU);
             SKUCounter++;
             product.SKU = SKUCounter;
 
