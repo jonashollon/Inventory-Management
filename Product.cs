@@ -502,8 +502,74 @@ namespace ConsoleApp8
             }
 
             public static void ExpirationSearch()
+        {
+            int searchedExpiration;
+            string userAnswer;
+            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var inventoryJson = File.ReadAllText(jsonFilePath);
+            if (File.Exists(jsonFilePath))
+                Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
+
+            else
             {
-                Console.WriteLine("expiration search");
+                // fixes pesky null exception
+                Product.productList.Add(new Product());
+            }
+
+            Console.WriteLine("Please enter how many days from today's date you would like to search for products with an expiration date of.");
+            while (!int.TryParse(Console.ReadLine(), out searchedExpiration))
+                Console.WriteLine("That was an incorrect input. Please try again.");
+
+            List<Product> searchProductList = new List<Product>(from product in productList
+                                                                where (product.productExpirationDate != null) && (product.productExpirationDate - DateTime.Now).Value.TotalDays < searchedExpiration 
+                                                                orderby product.SKU ascending
+                                                                select product);
+
+            if (searchProductList.Count > 0)
+            {
+                foreach (Product product in searchProductList)
+                    Console.WriteLine(
+                        @$"Name:            {product.productName}
+                        Price:              {product.productPurchasePrice}
+                        Place:              {product.productPurchasePlace}
+                        Purchase Date:      {product.productPurchaseDate}
+                        Expiration Date:    {product.productExpirationDate}
+                        SKU:                {product.SKU}");
+            }
+            else
+            {
+                while (true)
+                {
+                    Console.WriteLine($"There doesn't seem to be any products with an expiration date within {searchedExpiration} days.");
+                    Console.WriteLine(@"You can now:
+                    1. Restart your search
+                    2. Return to main menu
+                    3. Exit the program
+                    Which would you like to do?");
+                    userAnswer = Console.ReadLine();
+
+                    switch (userAnswer)
+                    {
+                        case "1":
+                            Product.ExpirationSearch();
+                            break;
+                        case "2":
+                            Program.Main();
+                            break;
+                        case "3":
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.WriteLine("You seem to have entered an invalid input. Please try again.");
+                            break;
+                    }
+                }
+            }
+        }
+
+        public static void ProductEdit()
+            {
+                Console.WriteLine("edit");
             }
         }
     }

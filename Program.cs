@@ -17,7 +17,8 @@ namespace ConsoleApp8
                 2. Remove a product
                 3. Search for a product
                 4. Check for products nearing expiration date
-                5. Exit");
+                5. Edit a product's attributes
+                6. Exit");
 
             string userResponse = Console.ReadLine();
             switch (userResponse)
@@ -79,6 +80,9 @@ namespace ConsoleApp8
                     Product.ExpirationSearch();
                     break;
                 case "5":
+                    Product.ProductEdit();
+                    break;
+                case "6":
                     Environment.Exit(0);
                     break;
                 default:
