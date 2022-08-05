@@ -8,38 +8,6 @@
     "SKU": 0
   },
   {
-    "productName": "gibb",
-    "productPurchasePrice": 1.0,
-    "productPurchasePlace": "asjdhask",
-    "productPurchaseDate": "1212-12-12T00:00:00",
-    "productExpirationDate": null,
-    "SKU": 1
-  },
-  {
-    "productName": "asdas",
-    "productPurchasePrice": 123.0,
-    "productPurchasePlace": "asd",
-    "productPurchaseDate": "1111-11-11T00:00:00",
-    "productExpirationDate": null,
-    "SKU": 1
-  },
-  {
-    "productName": "garbage feet man's shoes",
-    "productPurchasePrice": 120000000.0,
-    "productPurchasePlace": "garbage feet man's house",
-    "productPurchaseDate": "1941-12-14T00:00:00",
-    "productExpirationDate": "2041-12-14T00:00:00",
-    "SKU": 1
-  },
-  {
-    "productName": "garbage",
-    "productPurchasePrice": 123.0,
-    "productPurchasePlace": "asd",
-    "productPurchaseDate": "1111-11-11T00:00:00",
-    "productExpirationDate": null,
-    "SKU": 1
-  },
-  {
     "productName": "asdsa",
     "productPurchasePrice": 123123.0,
     "productPurchasePlace": "asdas",
@@ -48,11 +16,27 @@
     "SKU": 2
   },
   {
-    "productName": "fart",
-    "productPurchasePrice": 1.0,
-    "productPurchasePlace": "fart",
+    "productName": "beef burgernyon",
+    "productPurchasePrice": 100.0,
+    "productPurchasePlace": "le fransays plece",
+    "productPurchaseDate": "2020-01-01T00:00:00",
+    "productExpirationDate": "2022-08-22T00:00:00",
+    "SKU": 7
+  },
+  {
+    "productName": "burger",
+    "productPurchasePrice": 12.0,
+    "productPurchasePlace": "store",
     "productPurchaseDate": "1111-11-11T00:00:00",
-    "productExpirationDate": "1111-11-11T00:00:00",
-    "SKU": 3
+    "productExpirationDate": null,
+    "SKU": 8
+  },
+  {
+    "productName": "burger2",
+    "productPurchasePrice": 123.0,
+    "productPurchasePlace": "store",
+    "productPurchaseDate": "1111-11-11T00:00:00",
+    "productExpirationDate": null,
+    "SKU": 9
   }
 ]

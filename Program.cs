@@ -12,7 +12,7 @@ namespace ConsoleApp8
             Product.Start();
 
             Console.WriteLine("What would you like to do?");
-            Console.WriteLine(@"Choose from the following list of options (1,2,3,4):
+            Console.WriteLine(@"Choose from the following list of options (1, 2, 3, 4, 5, or 6):
                 1. Add a product
                 2. Remove a product
                 3. Search for a product
@@ -80,7 +80,36 @@ namespace ConsoleApp8
                     Product.ExpirationSearch();
                     break;
                 case "5":
-                    Product.ProductEdit();
+                    string userAnswerEdit;
+                    do
+                    {
+                        Console.WriteLine(@"With which product property would you like to search for the product(s)?
+                        You can make a selection by:
+                        1. Product Name
+                        2. Product SKU
+                        3. Purchase place of Product
+                        4. Expiration date of Product");
+                        userAnswerEdit = Console.ReadLine();
+                    }
+                    while (userAnswerEdit != "1" && userAnswerEdit != "2" && userAnswerEdit != "3" && userAnswerEdit != "4" && userAnswerEdit != "5");
+                    switch (userAnswerEdit)
+                    {
+                        case "1":
+                            Product.EditProductName();
+                            break;
+                        case "2":
+                            Product.EditProductPrice();
+                            break;
+                        case "3":
+                            Product.EditProductPurchasePlace();
+                            break;
+                        case "4":
+                            Product.EditProductPurchaseDate();
+                            break;
+                        case "5":
+                            Product.EditProductExpirationDate();
+                            break;
+                    }
                     break;
                 case "6":
                     Environment.Exit(0);
