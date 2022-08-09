@@ -9,8 +9,7 @@ namespace ConsoleApp8
     {
         public static void Main()
         {
-            Product.Start();
-
+            
             Console.WriteLine("What would you like to do?");
             Console.WriteLine(@"Choose from the following list of options (1, 2, 3, 4, 5, or 6):
                 1. Add a product

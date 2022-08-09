@@ -21,26 +21,36 @@ namespace ConsoleApp8
         {
 
         }
-        public static void Start()
-        {
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
-
-
-        }
-
+        
         public static void AddProduct()
         {
             string userAnswer;
             Product product = new Product();
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
-            var inventoryJson = File.ReadAllText(jsonFilePath);
-            if (File.Exists(jsonFilePath))
-                Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
+            string inventoryJson;
 
+            if (File.Exists(jsonFilePath))
+            {
+                inventoryJson = File.ReadAllText(jsonFilePath);
+                Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
+                
+            }
             else
             {
                 // fixes pesky null exception
                 productList.Add(new Product());
+
+                inventoryJson = JsonConvert.SerializeObject(productList);
+
+                File.WriteAllText(jsonFilePath, inventoryJson);
+
+                //FileStream fileStream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);
+                //static FileStream Create(string path);
+                //string inventoryJson = JsonConvert.SerializeObject(product);
+                //inventoryJson = JsonConvert.SerializeObject(productList, Formatting.Indented);
+                //File.WriteAllText(jsonFilePath, inventoryJson);
+
+                //File.create???
             }
             SKUCounter = productList.Max(s => s.SKU);
             SKUCounter++;
@@ -167,7 +177,7 @@ namespace ConsoleApp8
             {
                 int SKUToRemove;
                 string userAnswer;
-                var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                 var inventoryJson = File.ReadAllText(jsonFilePath);
                 if (File.Exists(jsonFilePath))
                     Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -262,7 +272,7 @@ namespace ConsoleApp8
         {
             string nameToRemove;
             string userAnswer;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -356,7 +366,7 @@ namespace ConsoleApp8
                     {
                         string searchedName;
                         string userAnswer;
-                        var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                        var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                         var inventoryJson = File.ReadAllText(jsonFilePath);
                         if (File.Exists(jsonFilePath))
                             Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -471,7 +481,7 @@ namespace ConsoleApp8
                     {
                         int searchedSKU;
                         string userAnswer;
-                        var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                        var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                         var inventoryJson = File.ReadAllText(jsonFilePath);
                         if (File.Exists(jsonFilePath))
                             Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -582,7 +592,7 @@ namespace ConsoleApp8
                     {
                         string searchedPurchasePlace;
                         string userAnswer;
-                        var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                        var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                         var inventoryJson = File.ReadAllText(jsonFilePath);
                         if (File.Exists(jsonFilePath))
                             Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -698,7 +708,7 @@ namespace ConsoleApp8
                     {
                         DateTime searchedExpirationDate;
                         string userAnswer;
-                        var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                        var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                         var inventoryJson = File.ReadAllText(jsonFilePath);
                         if (File.Exists(jsonFilePath))
                             Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -813,7 +823,7 @@ namespace ConsoleApp8
                     {
                         int searchedExpiration;
                         string userAnswer;
-                        var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+                        var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
                         var inventoryJson = File.ReadAllText(jsonFilePath);
                         if (File.Exists(jsonFilePath))
                             Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -1020,7 +1030,7 @@ namespace ConsoleApp8
         public static void EditProductName()
         {
             int searchedSKU;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -1145,7 +1155,7 @@ namespace ConsoleApp8
         public static void EditProductPrice()
         {
             int searchedSKU;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -1279,7 +1289,7 @@ namespace ConsoleApp8
 
         {
             int searchedSKU;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -1406,7 +1416,7 @@ namespace ConsoleApp8
 
         {
             int searchedSKU;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);
@@ -1534,7 +1544,7 @@ namespace ConsoleApp8
 
         {
             int searchedSKU;
-            var jsonFilePath = @"C:\Users\hollo\source\repos\ConsoleApp8\inventory.json";
+            var jsonFilePath = Path.Combine(Environment.CurrentDirectory, @"inventoryJson2.json");
             var inventoryJson = File.ReadAllText(jsonFilePath);
             if (File.Exists(jsonFilePath))
                 Product.productList = JsonConvert.DeserializeObject<List<Product>>(inventoryJson);

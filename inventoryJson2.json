@@ -1,0 +1,18 @@
+[
+  {
+    "productName": null,
+    "productPurchasePrice": 0.0,
+    "productPurchasePlace": null,
+    "productPurchaseDate": "0001-01-01T00:00:00",
+    "productExpirationDate": null,
+    "SKU": 0
+  },
+  {
+    "productName": "shoe",
+    "productPurchasePrice": 12312.0,
+    "productPurchasePlace": "shoe store",
+    "productPurchaseDate": "1111-11-11T00:00:00",
+    "productExpirationDate": null,
+    "SKU": 1
+  }
+]
