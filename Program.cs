@@ -50,7 +50,7 @@ namespace ConsoleApp8
                     string userAnswerSearch;
                     do
                     {
-                        Console.WriteLine(@"With which product property would you like to search for the product(s)?
+                        Console.WriteLine(@"With which product attribute would you like to search for the product(s)?
                         You can make a selection by:
                         1. Product Name
                         2. Product SKU
@@ -82,7 +82,7 @@ namespace ConsoleApp8
                     string userAnswerEdit;
                     do
                     {
-                        Console.WriteLine(@"With which product property would you like to search for the product(s)?
+                        Console.WriteLine(@"For the product you wish to edit, which product attribute do you wish to edit?
                         You can make a selection by:
                         1. Product Name
                         2. Product SKU

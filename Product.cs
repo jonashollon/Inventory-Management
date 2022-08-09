@@ -99,10 +99,10 @@ namespace ConsoleApp8
                             while (true)
                             {
                                 Console.WriteLine(@"You can now:
-                                1. Add another product
-                                2. Return to main menu
-                                3. Exit the program
-                                Which would you like to do?");
+                                    1. Add another product
+                                    2. Return to main menu
+                                    3. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -391,22 +391,22 @@ namespace ConsoleApp8
                 foreach (Product product in searchProductList)
                     Console.WriteLine(
                         @$"Name:            {product.productName}
-                                    Price:              {product.productPurchasePrice}
-                                    Place:              {product.productPurchasePlace}
-                                    Purchase Date:      {product.productPurchaseDate}
-                                    Expiration Date:    {product.productExpirationDate}
-                                    SKU:                {product.SKU}");
+                        Price:              {product.productPurchasePrice}
+                        Place:              {product.productPurchasePlace}
+                        Purchase Date:      {product.productPurchaseDate}
+                        Expiration Date:    {product.productExpirationDate}
+                        SKU:                {product.SKU}");
 
                 while (true)
                 {
                     Console.WriteLine(@"You can now:
-                                        1. Search for a product by name
-                                        2. Search for a product by SKU
-                                        3. Search for a product by purchase place
-                                        4. Search for a product by expiration date
-                                        5. Return to main menu
-                                        6. Exit the program
-                                        Which would you like to do?");
+                        1. Search for a product by name
+                        2. Search for a product by SKU
+                        3. Search for a product by purchase place
+                        4. Search for a product by expiration date
+                        5. Return to main menu
+                        6. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -441,13 +441,13 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products named {searchedName}.");
                     Console.WriteLine(@"You can now:
-                                        1. Search for a product by name
-                                        2. Search for a product by SKU
-                                        3. Search for a product by purchase place
-                                        4. Search for a product by expiration date
-                                        5. Return to main menu
-                                        6. Exit the program
-                                        Which would you like to do?");
+                        1. Search for a product by name
+                        2. Search for a product by SKU
+                        3. Search for a product by purchase place
+                        4. Search for a product by expiration date
+                        5. Return to main menu
+                        6. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -510,13 +510,13 @@ namespace ConsoleApp8
                             while (true)
                             {
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                             userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -552,13 +552,13 @@ namespace ConsoleApp8
                             {
                                 Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -625,13 +625,13 @@ namespace ConsoleApp8
                             while(true)
                             {        
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                     userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -667,13 +667,13 @@ namespace ConsoleApp8
                             {
                                 Console.WriteLine($"There doesn't seem to be any products that were purchased at {searchedPurchasePlace}.");
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -741,13 +741,13 @@ namespace ConsoleApp8
                             while (true)
                             {
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -782,13 +782,13 @@ namespace ConsoleApp8
                             {
                                 Console.WriteLine($"There doesn't seem to be any products with the expiration date of {searchedExpirationDate}.");
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for a product by name
-                                                    2. Search for a product by SKU
-                                                    3. Search for a product by purchase place
-                                                    4. Search for a product by expiration date
-                                                    5. Return to main menu
-                                                    6. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -846,8 +846,7 @@ namespace ConsoleApp8
                         if (searchProductList.Count > 0)
                         {
                             foreach (Product product in searchProductList)
-                                Console.WriteLine(
-                                @$"Name:            {product.productName}
+                                Console.WriteLine($@"Name:            {product.productName}
                                 Price:              {product.productPurchasePrice}
                                 Place:              {product.productPurchasePlace}
                                 Purchase Date:      {product.productPurchaseDate}
@@ -857,10 +856,10 @@ namespace ConsoleApp8
                             while (true)
                             {
                                 Console.WriteLine(@"You can now:
-                                                    1. Search for products within a certain expiration date range                                                    
-                                                    2. Return to main menu
-                                                    3. Exit the program
-                                                    Which would you like to do?");
+                                    1. Search for products within a certain expiration date range                                                    
+                                    2. Return to main menu
+                                    3. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -886,13 +885,13 @@ namespace ConsoleApp8
                             {
                                 Console.WriteLine($"There doesn't seem to be any products with an expiration date within {searchedExpiration} days.");
                                 Console.WriteLine(@"You can now:
-                                                                1. Search for a product by name
-                                                                2. Search for a product by SKU
-                                                                3. Search for a product by purchase place
-                                                                4. Search for a product by expiration date
-                                                                5. Return to main menu
-                                                                6. Exit the program
-                                                                Which would you like to do?");
+                                    1. Search for a product by name
+                                    2. Search for a product by SKU
+                                    3. Search for a product by purchase place
+                                    4. Search for a product by expiration date
+                                    5. Return to main menu
+                                    6. Exit the program
+                                    Which would you like to do?");
                                 userAnswer = Console.ReadLine();
 
                                 switch (userAnswer)
@@ -1065,14 +1064,14 @@ namespace ConsoleApp8
                 { 
                     Console.WriteLine("What would you like to do next?");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer2 = Console.ReadLine();
 
                     switch (userAnswer2)
@@ -1110,14 +1109,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -1197,14 +1196,14 @@ namespace ConsoleApp8
                 { 
                     Console.WriteLine("What would you like to do next?");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer2 = Console.ReadLine();
 
                     switch (userAnswer2)
@@ -1242,14 +1241,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -1324,14 +1323,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine("What would you like to do next?");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer2 = Console.ReadLine();
 
                     switch (userAnswer2)
@@ -1369,14 +1368,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -1452,14 +1451,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine("What would you like to do next?");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer2 = Console.ReadLine();
 
                     switch (userAnswer2)
@@ -1497,14 +1496,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
@@ -1580,14 +1579,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine("What would you like to do next?");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer2 = Console.ReadLine();
 
                     switch (userAnswer2)
@@ -1625,14 +1624,14 @@ namespace ConsoleApp8
                 {
                     Console.WriteLine($"There doesn't seem to be any products with a SKU of {searchedSKU}.");
                     Console.WriteLine(@"You can now:
-                                        1. Edit another product's name
-                                        2. Edit another product's price
-                                        3. Edit another product's purchase place
-                                        4. Edit another product's purchase date
-                                        5. Edit another product's expiration date
-                                        6. Return to main menu
-                                        7. Exit the program
-                                        Which would you like to do?");
+                        1. Edit another product's name
+                        2. Edit another product's price
+                        3. Edit another product's purchase place
+                        4. Edit another product's purchase date
+                        5. Edit another product's expiration date
+                        6. Return to main menu
+                        7. Exit the program
+                        Which would you like to do?");
                     userAnswer = Console.ReadLine();
 
                     switch (userAnswer)
